@@ -1,0 +1,12 @@
+name: Secrets
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Secrets to env
+      env: # Or as an environment variable
+        super_secret: ${{ secrets.SECRET_KEY_NAME }}
+
